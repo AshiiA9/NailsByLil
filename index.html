@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NailsByLil Menu</title>
+<style>
+:root{
+  --pink:#ff7eb9;
+  --hot:#ff4fa3;
+  --soft:#fff1f7;
+  --card:#ffffff;
+  --text:#3b2430;
+  --muted:#8b6474;
+  --border:#ffd1e6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:linear-gradient(180deg,#fff1f7,#ffe3f0);
+  color:var(--text);
+}
+.header{
+  text-align:center;
+  padding:34px 18px 24px;
+  background:linear-gradient(135deg,#ff8ac5,#ffc2df);
+  color:white;
+}
+.logo{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.tagline{
+  margin-top:8px;
+  font-size:16px;
+  opacity:.95;
+}
+.wrap{
+  max-width:760px;
+  margin:auto;
+  padding:18px;
+}
+.card{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:24px;
+  padding:18px;
+  margin-bottom:16px;
+  box-shadow:0 8px 20px rgba(255,79,163,.12);
+}
+.section-title{
+  font-size:24px;
+  font-weight:800;
+  color:var(--hot);
+  margin:0 0 12px;
+}
+.item{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px dashed var(--border);
+}
+.item:last-child{border-bottom:none}
+.name{
+  font-weight:750;
+  font-size:18px;
+}
+.desc{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.35;
+}
+.price{
+  font-size:20px;
+  font-weight:900;
+  color:var(--hot);
+  white-space:nowrap;
+}
+.badge{
+  display:inline-block;
+  background:var(--soft);
+  color:var(--hot);
+  border:1px solid var(--border);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  margin-top:8px;
+  font-weight:700;
+}
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  padding:18px;
+}
+.button{
+  display:block;
+  text-align:center;
+  background:linear-gradient(135deg,#ff4fa3,#ff8ac5);
+  color:white;
+  text-decoration:none;
+  padding:15px;
+  border-radius:18px;
+  font-weight:800;
+  margin-top:14px;
+}
+</style>
+</head>
 
+<body>
+  <div class="header">
+    <div class="logo">NailsByLil</div>
+    <div class="tagline">Cute nails, clean cuticles & pretty custom sets</div>
+  </div>
+
+  <div class="wrap">
+
+    <div class="card">
+      <h2 class="section-title">Service Menu</h2>
+
+      <div class="item">
+        <div>
+          <div class="name">Cuticle Job</div>
+          <div class="desc">Cuticle clean-up, shaping around the nail, and a fresh neat finish.</div>
+        </div>
+        <div class="price">$15</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name">Manicure</div>
+          <div class="desc">Nail shaping, cuticle care, light clean-up, and polish finish.</div>
+        </div>
+        <div class="price">$30</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name">Pedicure</div>
+          <div class="desc">Foot soak, nail shaping, cuticle care, light clean-up, and polish finish.</div>
+        </div>
+        <div class="price">$45</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Custom Painting</h2>
+
+      <div class="item">
+        <div>
+          <div class="name">S.I.M.P.L.E. Custom Painting</div>
+          <div class="desc">Soft, Iconic, Minimal, Pretty Little Elegance. Perfect for cute clean designs.</div>
+          <span class="badge">Best for simple looks</span>
+        </div>
+        <div class="price">$50</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="name">L.U.X.E. Custom Painting</div>
+          <div class="desc">Luxury, Unique, Xpressive Elegance. Best for more detailed custom art.</div>
+          <span class="badge">More detail + more glam</span>
+        </div>
+        <div class="price">$75</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Booking Note</h2>
+      <p class="desc">
+        Prices may vary depending on nail length, design detail, polish type, and add-ons.
+      </p>
+      <a class="button" href="sms:?body=Hi! I’d like to book an appointment with NailsByLil.">Book by Text</a>
+    </div>
+
+    <div class="footer">
+      NailsByLil · Pretty pink nail menu
+    </div>
+
+  </div>
+</body>
+</html>
