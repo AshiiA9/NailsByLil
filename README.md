@@ -1,2 +1,0 @@
-# NailsByLil
-Nail Menu
