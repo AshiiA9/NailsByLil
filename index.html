@@ -7,213 +7,312 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --pink:#ff7eb9;
-  --hot:#ff4fa3;
+  --hot:#ec2f86;
   --soft:#fff1f7;
   --card:#ffffff;
   --text:#3b2430;
   --muted:#8b6474;
-  --border:#ffd1e6;
+  --border:#ff9dcc;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:linear-gradient(180deg,#fff1f7,#ffe3f0);
+  background:#ffffff;
   color:var(--text);
+  font-family:'Quicksand', sans-serif;
 }
+
+.wrap{
+  max-width:850px;
+  margin:auto;
+  padding:22px 16px 0;
+}
+
 .header{
   text-align:center;
-  padding:34px 18px 24px;
-  background:linear-gradient(135deg,#ff8ac5,#ffc2df);
-  color:white;
+  padding:26px 10px 10px;
 }
+
 .logo{
   font-family:'Great Vibes', cursive;
-  font-size:68px;
+  font-size:78px;
+  color:var(--hot);
   font-weight:400;
-  letter-spacing:1px;
-  text-shadow:0 3px 10px rgba(255,255,255,.4);
+  text-shadow:0 3px 8px rgba(236,47,134,.22);
+  line-height:1;
 }
+
 .tagline{
   margin-top:8px;
-  font-size:16px;
-  opacity:.95;
+  font-size:17px;
+  color:#35242c;
 }
-.wrap{
-  max-width:760px;
-  margin:auto;
-  padding:18px;
+
+.decor{
+  color:var(--pink);
+  font-size:22px;
+  margin:8px 0;
 }
+
 .card{
-  background:var(--card);
+  background:white;
   border:2px solid var(--border);
   border-radius:24px;
-  padding:18px;
-  margin-bottom:16px;
-  box-shadow:0 8px 20px rgba(255,79,163,.12);
+  padding:20px;
+  margin:28px 0;
+  box-shadow:0 8px 18px rgba(255,126,185,.10);
+  position:relative;
 }
-.section-title{
-  font-size:24px;
-  font-weight:800;
+
+.ribbon{
+  font-family:'Great Vibes', cursive;
+  background:#ffd7e8;
   color:var(--hot);
-  margin:0 0 12px;
+  font-size:38px;
+  padding:4px 35px;
+  border-radius:10px;
+  display:inline-block;
+  position:absolute;
+  top:-28px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
 }
+
 .item{
   display:flex;
   justify-content:space-between;
-  gap:12px;
-  padding:14px 0;
-  border-bottom:1px dashed var(--border);
+  gap:14px;
+  padding:24px 0 18px;
+  border-bottom:1px dashed #ffb4d4;
 }
+
 .item:last-child{border-bottom:none}
+
 .name{
-  font-weight:750;
-  font-size:18px;
-}
-.desc{
-  margin-top:4px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.35;
-}
-.price{
-  font-size:20px;
-  font-weight:900;
+  font-family:'Great Vibes', cursive;
   color:var(--hot);
+  font-size:38px;
+  line-height:1;
+}
+
+.desc{
+  margin-top:6px;
+  color:#2e2328;
+  font-size:16px;
+  line-height:1.45;
+}
+
+.price{
+  font-size:34px;
+  color:var(--hot);
+  font-weight:700;
   white-space:nowrap;
 }
+
 .badge{
   display:inline-block;
-  background:var(--soft);
+  margin-top:10px;
   color:var(--hot);
-  border:1px solid var(--border);
-  padding:6px 10px;
+  background:#fff1f7;
+  border:1px solid #ffaad0;
   border-radius:999px;
-  font-size:13px;
-  margin-top:8px;
+  padding:6px 14px;
+  font-size:14px;
   font-weight:700;
 }
-.button{
-  display:block;
+
+.booking{
   text-align:center;
+}
+
+.button{
+  display:inline-block;
   background:linear-gradient(135deg,#ff4fa3,#ff8ac5);
   color:white;
   text-decoration:none;
-  padding:15px;
-  border-radius:18px;
+  padding:14px 34px;
+  border-radius:999px;
+  font-size:22px;
   font-weight:800;
-  margin-top:14px;
+  box-shadow:0 6px 15px rgba(236,47,134,.25);
+  border:2px solid #ffb4d4;
 }
-.nail-art{
+
+.nail-row{
   display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:16px;
-  font-size:46px;
-  padding:24px 10px 10px;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:12px;
+  margin-top:28px;
+  padding-bottom:0;
+  overflow:hidden;
 }
-.hand{
-  background:white;
-  border:2px solid #ffd1e6;
-  border-radius:20px;
-  padding:12px;
-  box-shadow:0 6px 14px rgba(255,79,163,.15);
+
+.hand-set{
+  width:32%;
+  max-width:260px;
 }
+
 .footer{
   text-align:center;
   color:var(--muted);
   font-size:13px;
-  padding:18px;
+  padding:12px 0 18px;
+}
+
+@media(max-width:600px){
+  .logo{font-size:62px}
+  .name{font-size:32px}
+  .price{font-size:28px}
+  .ribbon{font-size:32px}
+  .button{font-size:18px}
+  .nail-row{gap:4px}
 }
 </style>
 </head>
 
 <body>
+<div class="wrap">
+
   <div class="header">
+    <div class="decor">♡ ✧ ♡</div>
     <div class="logo">NailsByLil</div>
     <div class="tagline">Cute nails, clean cuticles & pretty custom sets</div>
+    <div class="decor">♡ ✧ ♡</div>
   </div>
 
-  <div class="wrap">
+  <div class="card">
+    <div class="ribbon">Service Menu</div>
 
-    <div class="card">
-      <h2 class="section-title">Service Menu</h2>
-
-      <div class="item">
-        <div>
-          <div class="name">Cuticle Job</div>
-          <div class="desc">Cuticle clean-up, shaping around the nail, and a fresh neat finish.</div>
-        </div>
-        <div class="price">$15</div>
+    <div class="item">
+      <div>
+        <div class="name">Cuticle Job</div>
+        <div class="desc">Cuticle clean-up, shaping around the nail, and a fresh neat finish.</div>
       </div>
-
-      <div class="item">
-        <div>
-          <div class="name">Manicure</div>
-          <div class="desc">Nail shaping, cuticle care, light clean-up, and polish finish.</div>
-        </div>
-        <div class="price">$30</div>
-      </div>
-
-      <div class="item">
-        <div>
-          <div class="name">Pedicure</div>
-          <div class="desc">Foot soak, nail shaping, cuticle care, light clean-up, and polish finish.</div>
-        </div>
-        <div class="price">$45</div>
-      </div>
+      <div class="price">$15</div>
     </div>
 
-    <div class="card">
-      <h2 class="section-title">Custom Painting</h2>
-
-      <div class="item">
-        <div>
-          <div class="name">S.I.M.P.L.E. Custom Painting</div>
-          <div class="desc">Soft, Iconic, Minimal, Pretty Little Elegance. Perfect for cute clean designs.</div>
-          <span class="badge">Best for simple looks</span>
-        </div>
-        <div class="price">$50</div>
+    <div class="item">
+      <div>
+        <div class="name">Manicure</div>
+        <div class="desc">Nail shaping, cuticle care, light clean-up, and polish finish.</div>
       </div>
+      <div class="price">$30</div>
+    </div>
 
-      <div class="item">
-        <div>
-          <div class="name">L.U.X.E. Custom Painting</div>
-          <div class="desc">Luxury, Unique, Xpressive Elegance. Best for more detailed custom art.</div>
-          <span class="badge">More detail + more glam</span>
-        </div>
-        <div class="price">$75</div>
+    <div class="item">
+      <div>
+        <div class="name">Pedicure</div>
+        <div class="desc">Foot soak, nail shaping, cuticle care, light clean-up, and polish finish.</div>
       </div>
+      <div class="price">$45</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon">Custom Painting</div>
+
+    <div class="item">
+      <div>
+        <div class="name">S.I.M.P.L.E. Custom Painting</div>
+        <div class="desc">Soft, Iconic, Minimal, Pretty Little Elegance. Perfect for cute clean designs.</div>
+        <span class="badge">♡ Best for simple looks</span>
+      </div>
+      <div class="price">$50</div>
     </div>
 
-    <div class="card">
-      <h2 class="section-title">Booking Note</h2>
-      <p class="desc">
-        Prices may vary depending on nail length, design detail, polish type, and add-ons.
-      </p>
-
-      <a class="button"
-      href="sms:4239671816?body=Hi! I'd like to book an appointment with NailsByLil.">
-        💖 Text Lil To Book 💖
-      </a>
+    <div class="item">
+      <div>
+        <div class="name">L.U.X.E. Custom Painting</div>
+        <div class="desc">Luxury, Unique, Xpressive Elegance. Best for more detailed custom art.</div>
+        <span class="badge">♡ More detail + more glam</span>
+      </div>
+      <div class="price">$75</div>
     </div>
+  </div>
 
-    <div class="nail-art">
-      <div class="hand">🖐️🐳💅🌸💕</div>
-      <div class="hand">🖐️🌺💅🩷🌼</div>
-      <div class="hand">🖐️💕💅🐳🌷</div>
-      <div class="hand">🖐️🌸💅💖🦋</div>
-    </div>
+  <div class="card booking">
+    <div class="ribbon">Booking Note</div>
+    <p class="desc">
+      Prices may vary depending on nail length, design detail, polish type, and add-ons.
+    </p>
 
-    <div class="footer">
-      NailsByLil · Pretty pink nail menu
-    </div>
+    <a class="button" href="sms:4239671816?body=Hi! I'd like to book an appointment with NailsByLil.">
+      ✨ 💖 Text Lil To Book 💖 ✨
+    </a>
+  </div>
+
+  <div class="nail-row">
+
+    <svg class="hand-set" viewBox="0 0 260 150">
+      <g transform="rotate(-8 110 120)">
+        <path d="M18 145 C30 95,45 60,65 85 C78 55,100 48,112 83 C127 45,151 45,158 85 C178 58,205 70,197 110 C215 112,229 124,226 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
+        <ellipse cx="55" cy="77" rx="16" ry="25" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="105" cy="71" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="151" cy="73" rx="16" ry="25" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="195" cy="98" rx="16" ry="24" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+        <path d="M47 76 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
+        <circle cx="63" cy="73" r="2" fill="#245"/>
+        <path d="M98 72 l7 -8 l7 8 l-7 8z" fill="#ff6faf"/>
+        <circle cx="151" cy="73" r="5" fill="#fff"/>
+        <circle cx="145" cy="68" r="5" fill="#fff"/>
+        <circle cx="157" cy="68" r="5" fill="#fff"/>
+        <circle cx="151" cy="63" r="4" fill="#ff70a8"/>
+        <path d="M190 96 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
+      </g>
+    </svg>
+
+    <svg class="hand-set" viewBox="0 0 260 150">
+      <g>
+        <path d="M15 145 C30 92,50 63,68 88 C80 55,103 48,114 84 C130 45,153 45,160 84 C180 58,204 70,198 111 C216 113,232 126,230 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
+        <ellipse cx="57" cy="78" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="106" cy="72" rx="16" ry="25" fill="#c9f7c6" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="152" cy="74" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="196" cy="99" rx="16" ry="24" fill="#ffe3a3" stroke="#ec2f86" stroke-width="2"/>
+        <path d="M57 78 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
+        <circle cx="106" cy="72" r="6" fill="#ff70a8"/>
+        <circle cx="98" cy="72" r="5" fill="#ff70a8"/>
+        <circle cx="114" cy="72" r="5" fill="#ff70a8"/>
+        <circle cx="106" cy="64" r="5" fill="#ff70a8"/>
+        <circle cx="106" cy="72" r="3" fill="#ffe85c"/>
+        <path d="M144 74 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
+        <circle cx="160" cy="71" r="2" fill="#245"/>
+        <circle cx="196" cy="99" r="4" fill="#fff"/>
+      </g>
+    </svg>
+
+    <svg class="hand-set" viewBox="0 0 260 150">
+      <g transform="rotate(8 130 120)">
+        <path d="M18 145 C32 96,48 62,66 86 C80 55,103 48,115 83 C132 45,154 45,161 85 C181 58,205 70,198 110 C216 112,230 124,228 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
+        <ellipse cx="57" cy="77" rx="16" ry="25" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="107" cy="71" rx="16" ry="25" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="153" cy="73" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+        <ellipse cx="197" cy="98" rx="16" ry="24" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+        <circle cx="57" cy="77" r="5" fill="#fff"/>
+        <circle cx="51" cy="72" r="5" fill="#fff"/>
+        <circle cx="63" cy="72" r="5" fill="#fff"/>
+        <circle cx="57" cy="66" r="4" fill="#ff70a8"/>
+        <path d="M99 72 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
+        <circle cx="115" cy="69" r="2" fill="#245"/>
+        <path d="M153 73 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
+        <path d="M190 96 l7 -8 l7 8 l-7 8z" fill="#ff6faf"/>
+      </g>
+    </svg>
 
   </div>
+
+  <div class="footer">
+    NailsByLil · Pretty pink nail menu
+  </div>
+
+</div>
 </body>
 </html>
