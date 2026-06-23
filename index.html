@@ -33,6 +33,7 @@ body{
   max-width:850px;
   margin:auto;
   padding:22px 16px 0;
+  overflow:hidden;
 }
 
 .header{
@@ -66,7 +67,7 @@ body{
   border:2px solid var(--border);
   border-radius:24px;
   padding:20px;
-  margin:28px 0;
+  margin:30px 0;
   box-shadow:0 8px 18px rgba(255,126,185,.10);
   position:relative;
 }
@@ -146,19 +147,28 @@ body{
   border:2px solid #ffb4d4;
 }
 
-.nail-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:12px;
-  margin-top:28px;
-  padding-bottom:0;
-  overflow:hidden;
+.small-note{
+  margin-top:8px;
+  color:var(--hot);
+  font-weight:700;
+  font-size:14px;
 }
 
-.hand-set{
-  width:32%;
-  max-width:260px;
+.nails-bottom{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  align-items:end;
+  margin-top:10px;
+  padding:0 0 4px;
+}
+
+.nail-set{
+  width:100%;
+  height:auto;
+  display:block;
+  overflow:visible;
 }
 
 .footer{
@@ -169,12 +179,19 @@ body{
 }
 
 @media(max-width:600px){
-  .logo{font-size:62px}
-  .name{font-size:32px}
-  .price{font-size:28px}
+  .wrap{padding:18px 10px 0}
+  .logo{font-size:64px}
+  .tagline{font-size:15px}
+  .card{padding:18px 14px}
   .ribbon{font-size:32px}
-  .button{font-size:18px}
-  .nail-row{gap:4px}
+  .name{font-size:31px}
+  .price{font-size:28px}
+  .desc{font-size:15px}
+  .button{font-size:18px;padding:13px 24px}
+  .nails-bottom{
+    gap:4px;
+    margin-top:6px;
+  }
 }
 </style>
 </head>
@@ -248,63 +265,87 @@ body{
     <a class="button" href="sms:4239671816?body=Hi! I'd like to book an appointment with NailsByLil.">
       ✨ 💖 Text Lil To Book 💖 ✨
     </a>
+
+    <div class="small-note">(Opens your messages app)</div>
   </div>
 
-  <div class="nail-row">
+  <div class="nails-bottom">
 
-    <svg class="hand-set" viewBox="0 0 260 150">
-      <g transform="rotate(-8 110 120)">
-        <path d="M18 145 C30 95,45 60,65 85 C78 55,100 48,112 83 C127 45,151 45,158 85 C178 58,205 70,197 110 C215 112,229 124,226 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
-        <ellipse cx="55" cy="77" rx="16" ry="25" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="105" cy="71" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="151" cy="73" rx="16" ry="25" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="195" cy="98" rx="16" ry="24" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
-        <path d="M47 76 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
-        <circle cx="63" cy="73" r="2" fill="#245"/>
-        <path d="M98 72 l7 -8 l7 8 l-7 8z" fill="#ff6faf"/>
-        <circle cx="151" cy="73" r="5" fill="#fff"/>
-        <circle cx="145" cy="68" r="5" fill="#fff"/>
-        <circle cx="157" cy="68" r="5" fill="#fff"/>
-        <circle cx="151" cy="63" r="4" fill="#ff70a8"/>
-        <path d="M190 96 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
-      </g>
+    <svg class="nail-set" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+      <path d="M12 150 C28 118,34 91,48 73 C58 59,76 66,75 89 L73 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M70 150 C77 111,80 76,94 54 C105 38,128 45,126 76 L120 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M118 150 C125 106,130 64,146 43 C158 27,182 36,178 70 L168 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M165 150 C174 111,180 78,197 61 C211 48,230 60,224 90 L212 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M214 150 C222 126,229 104,242 96 C254 90,263 104,258 122 L250 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+
+      <ellipse cx="58" cy="78" rx="15" ry="22" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="107" cy="59" rx="15" ry="23" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="160" cy="49" rx="15" ry="24" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="209" cy="75" rx="15" ry="22" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="247" cy="108" rx="12" ry="17" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+
+      <circle cx="57" cy="78" r="5" fill="#fff"/>
+      <circle cx="51" cy="74" r="4" fill="#fff"/>
+      <circle cx="63" cy="74" r="4" fill="#fff"/>
+      <circle cx="57" cy="69" r="3" fill="#ff70a8"/>
+
+      <path d="M99 59 q8 -10 18 0 q-9 11 -18 0" fill="#5bbcff"/>
+      <circle cx="114" cy="56" r="2" fill="#245"/>
+
+      <path d="M154 49 c-7-7-15 3 0 15 c15-12 7-22 0-15z" fill="#ff70a8"/>
+      <circle cx="207" cy="75" r="4" fill="#fff"/>
+      <path d="M244 107 l4 -6 l4 6 l-4 6z" fill="#ff70a8"/>
     </svg>
 
-    <svg class="hand-set" viewBox="0 0 260 150">
-      <g>
-        <path d="M15 145 C30 92,50 63,68 88 C80 55,103 48,114 84 C130 45,153 45,160 84 C180 58,204 70,198 111 C216 113,232 126,230 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
-        <ellipse cx="57" cy="78" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="106" cy="72" rx="16" ry="25" fill="#c9f7c6" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="152" cy="74" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="196" cy="99" rx="16" ry="24" fill="#ffe3a3" stroke="#ec2f86" stroke-width="2"/>
-        <path d="M57 78 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
-        <circle cx="106" cy="72" r="6" fill="#ff70a8"/>
-        <circle cx="98" cy="72" r="5" fill="#ff70a8"/>
-        <circle cx="114" cy="72" r="5" fill="#ff70a8"/>
-        <circle cx="106" cy="64" r="5" fill="#ff70a8"/>
-        <circle cx="106" cy="72" r="3" fill="#ffe85c"/>
-        <path d="M144 74 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
-        <circle cx="160" cy="71" r="2" fill="#245"/>
-        <circle cx="196" cy="99" r="4" fill="#fff"/>
-      </g>
+    <svg class="nail-set" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+      <path d="M14 150 C30 116,37 88,53 70 C66 56,82 66,80 91 L76 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M75 150 C82 110,87 75,103 53 C115 37,137 46,134 77 L126 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M125 150 C132 104,138 62,155 42 C168 27,191 37,187 71 L176 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M171 150 C181 111,188 80,204 62 C218 49,236 62,230 91 L217 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M215 150 C224 126,231 104,244 96 C257 90,266 105,260 124 L252 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+
+      <ellipse cx="63" cy="76" rx="15" ry="22" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="115" cy="59" rx="15" ry="23" fill="#c9f7c6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="169" cy="50" rx="15" ry="24" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="218" cy="76" rx="15" ry="22" fill="#ffe3a3" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="249" cy="110" rx="12" ry="17" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+
+      <path d="M63 75 c-7-7-15 3 0 15 c15-12 7-22 0-15z" fill="#ff70a8"/>
+      <circle cx="115" cy="59" r="6" fill="#ff70a8"/>
+      <circle cx="107" cy="59" r="5" fill="#ff70a8"/>
+      <circle cx="123" cy="59" r="5" fill="#ff70a8"/>
+      <circle cx="115" cy="51" r="5" fill="#ff70a8"/>
+      <circle cx="115" cy="59" r="3" fill="#ffe85c"/>
+      <path d="M160 50 q8 -10 18 0 q-9 11 -18 0" fill="#5bbcff"/>
+      <circle cx="175" cy="47" r="2" fill="#245"/>
+      <circle cx="218" cy="76" r="4" fill="#fff"/>
+      <circle cx="249" cy="110" r="3" fill="#fff"/>
     </svg>
 
-    <svg class="hand-set" viewBox="0 0 260 150">
-      <g transform="rotate(8 130 120)">
-        <path d="M18 145 C32 96,48 62,66 86 C80 55,103 48,115 83 C132 45,154 45,161 85 C181 58,205 70,198 110 C216 112,230 124,228 145 Z" fill="#ffd0b8" stroke="#db8d72" stroke-width="2"/>
-        <ellipse cx="57" cy="77" rx="16" ry="25" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="107" cy="71" rx="16" ry="25" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="153" cy="73" rx="16" ry="25" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
-        <ellipse cx="197" cy="98" rx="16" ry="24" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
-        <circle cx="57" cy="77" r="5" fill="#fff"/>
-        <circle cx="51" cy="72" r="5" fill="#fff"/>
-        <circle cx="63" cy="72" r="5" fill="#fff"/>
-        <circle cx="57" cy="66" r="4" fill="#ff70a8"/>
-        <path d="M99 72 q10 -12 20 0 q-10 12 -20 0" fill="#5bbcff"/>
-        <circle cx="115" cy="69" r="2" fill="#245"/>
-        <path d="M153 73 c-8-8-18 4 0 15 c18-11 8-23 0-15z" fill="#ff70a8"/>
-        <path d="M190 96 l7 -8 l7 8 l-7 8z" fill="#ff6faf"/>
-      </g>
+    <svg class="nail-set" viewBox="0 0 260 150" preserveAspectRatio="xMidYMax meet">
+      <path d="M12 150 C28 118,34 91,48 73 C58 59,76 66,75 89 L73 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M70 150 C77 111,80 76,94 54 C105 38,128 45,126 76 L120 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M118 150 C125 106,130 64,146 43 C158 27,182 36,178 70 L168 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M165 150 C174 111,180 78,197 61 C211 48,230 60,224 90 L212 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+      <path d="M214 150 C222 126,229 104,242 96 C254 90,263 104,258 122 L250 150 Z" fill="#ffd2bd" stroke="#db8d72" stroke-width="2"/>
+
+      <ellipse cx="58" cy="78" rx="15" ry="22" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="107" cy="59" rx="15" ry="23" fill="#b7e7ff" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="160" cy="49" rx="15" ry="24" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="209" cy="75" rx="15" ry="22" fill="#ffd0e6" stroke="#ec2f86" stroke-width="2"/>
+      <ellipse cx="247" cy="108" rx="12" ry="17" fill="#c9b6ff" stroke="#ec2f86" stroke-width="2"/>
+
+      <circle cx="58" cy="78" r="5" fill="#fff"/>
+      <circle cx="52" cy="74" r="4" fill="#fff"/>
+      <circle cx="64" cy="74" r="4" fill="#fff"/>
+      <circle cx="58" cy="69" r="3" fill="#ff70a8"/>
+
+      <path d="M99 59 q8 -10 18 0 q-9 11 -18 0" fill="#5bbcff"/>
+      <circle cx="114" cy="56" r="2" fill="#245"/>
+
+      <path d="M160 49 c-7-7-15 3 0 15 c15-12 7-22 0-15z" fill="#ff70a8"/>
+      <path d="M204 75 l5 -7 l5 7 l-5 7z" fill="#ff70a8"/>
+      <circle cx="247" cy="108" r="3" fill="#fff"/>
     </svg>
 
   </div>
