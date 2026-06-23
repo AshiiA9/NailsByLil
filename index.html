@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NailsByLil Menu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --pink:#ff7eb9;
@@ -28,9 +33,11 @@ body{
   color:white;
 }
 .logo{
-  font-size:42px;
-  font-weight:800;
-  letter-spacing:.5px;
+  font-family:'Great Vibes', cursive;
+  font-size:68px;
+  font-weight:400;
+  letter-spacing:1px;
+  text-shadow:0 3px 10px rgba(255,255,255,.4);
 }
 .tagline{
   margin-top:8px;
@@ -91,12 +98,6 @@ body{
   margin-top:8px;
   font-weight:700;
 }
-.footer{
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
-  padding:18px;
-}
 .button{
   display:block;
   text-align:center;
@@ -107,6 +108,27 @@ body{
   border-radius:18px;
   font-weight:800;
   margin-top:14px;
+}
+.nail-art{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  font-size:46px;
+  padding:24px 10px 10px;
+}
+.hand{
+  background:white;
+  border:2px solid #ffd1e6;
+  border-radius:20px;
+  padding:12px;
+  box-shadow:0 6px 14px rgba(255,79,163,.15);
+}
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  padding:18px;
 }
 </style>
 </head>
@@ -174,7 +196,18 @@ body{
       <p class="desc">
         Prices may vary depending on nail length, design detail, polish type, and add-ons.
       </p>
-      <a class="button" href="sms:?body=Hi! I’d like to book an appointment with NailsByLil.">Book by Text</a>
+
+      <a class="button"
+      href="sms:4239671816?body=Hi! I'd like to book an appointment with NailsByLil.">
+        💖 Text Lil To Book 💖
+      </a>
+    </div>
+
+    <div class="nail-art">
+      <div class="hand">🖐️🐳💅🌸💕</div>
+      <div class="hand">🖐️🌺💅🩷🌼</div>
+      <div class="hand">🖐️💕💅🐳🌷</div>
+      <div class="hand">🖐️🌸💅💖🦋</div>
     </div>
 
     <div class="footer">
